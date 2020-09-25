@@ -69,7 +69,7 @@
             
             <br><br><br> 
 
-            
+
             <div class="card">
                 <div class="card-header">Users</div>
 
@@ -80,12 +80,14 @@
                         </div>
                     @endif
 
-                <table class="table table-striped table-inverse table-responsive">
+                <table class="table table-striped">
                     <thead class="thead-inverse">
                         <tr>
                             <th>id</th>
                             <th>Name</th>
                             <th>Email</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -94,6 +96,13 @@
                                 <td scope="row">{{ $user->id }}</td>
                                 <td>{{ $user->name }}</td>
                                 <td>{{ $user->email }}</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary btn-sm">Edit</button>
+                                </td>
+
+                                <td>
+                                    <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                </td>
                             </tr>
                             @endforeach
                             
